@@ -1,15 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class EnemyPatrolInput : MonoBehaviour, IPlayerInput
 {
     private float hInput, vInput;
+
     public float HInput { get { return hInput; } }
     public float VInput { get { return vInput; } }
 
     private float timer = 0;
     public float maxTime = 5f;
+
+    public event Action OnJumpPressed;
 
     private void Start()
     {

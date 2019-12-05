@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class EnemyCircleInput : MonoBehaviour, IPlayerInput
     public float HInput { get { return hInput; } }
 
     public float VInput { get { return vInput; } }
+
+    public event Action OnJumpPressed;
 
     void Update()
     {

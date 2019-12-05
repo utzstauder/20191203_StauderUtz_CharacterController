@@ -6,4 +6,6 @@ public interface IPlayerInput
 {
     float HInput { get; }
     float VInput { get; }
+
+    event System.Action OnJumpPressed;
 }

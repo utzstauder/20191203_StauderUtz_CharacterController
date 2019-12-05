@@ -11,6 +11,13 @@ public class CharacterController : MonoBehaviour
     private void Awake()
     {
         input = GetComponent<IPlayerInput>();
+
+        input.OnJumpPressed += Input_OnJumpPressed;
+    }
+
+    private void Input_OnJumpPressed()
+    {
+        Debug.Log("CharacterController: jump");
     }
 
     private void Update()
